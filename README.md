@@ -15,3 +15,14 @@ In our LOB context, at some time $t$, consider the full $60$-dimensional path of
 We simply consider the similarity of these paths using the aforementioned inner product, i.e. $k_d^{\oplus}(x(t),x(t-k))$, corresponding to the the Kernel entries $K_{12} = K_{21}$.
 
 For increasing $k$, we capture the "autocorrelation" on longer timespans, and hence our similarity decreases. By using an ensemble of $k$ s, we can capture short and long-term volatility. 
+
+
+We tested a variety of feature engineering and Machine Learning methods to improve long-term predictive performance on LOB data. We found the most success using a blend of two groups of LightGBM models; one augmented by signature kernels, and the other trained on signature transforms. The most important development was the "autocorrelation"-like statistic derived from Signature Kernels - we demonstrated in our previous submission that it demonstrably boosts the performance of a control LightGBM model by a significant degree.
+
+We hypothesise that this statistic captures temporal fluctuations and nonlinear interactions within the data in a compact manner for use in our models. This makes it a preferable choice over the high-dimensional and computationally expensive signature transform, which we had to truncate earlier due to computational bottlenecks. Furthermore, our proposed statistic acts as a effective measure of "autocorrelation" for high-dimensional rough paths, and is low-dimensional enough to be fit alongside other data.
+
+However, it is important to contextualise signature-based methods in both the ML pipeline and data setting. Our results suggest that their utility is maximized when placed alongisde and even composed with traditional financial features. By incorporating windowing in kernels and blending lagged models, we were overall able to capture the multiscale time dynamics to a high degree.
+
+We also explored a variety of blending and stacking methods to effectively minimize overfitting and create a more robust and powerful model.
+
+Overall, our findings highlight the power of signature kernels in feature engineering. Future work could further explore computing statistics of larger kernels, using familes of lagged time series, and refining windowing strategies.
