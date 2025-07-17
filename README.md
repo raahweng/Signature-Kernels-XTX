@@ -1,4 +1,4 @@
-# Signature-Kernels-XTX
+# Background
 
 Let $P_X$ be a set of paths in a topological space $X$. We define the truncated Signature Kernel up to depth $d$ $k_d^{\oplus}: P_X \times P_X \rightarrow \mathbb{R}$:
 $$k_d^{\oplus}(x,y) = \langle S(k_x), S(k_y) \rangle = \sum_{m = 0}^{d}{\int_{s_1 < ... < s_m, t_1<...<t_m} {\prod^m_{i=1}{d \kappa(s_i, t_i)}} }$$
@@ -16,6 +16,7 @@ We simply consider the similarity of these paths using the aforementioned inner 
 
 For increasing $k$, we capture the "autocorrelation" on longer timespans, and hence our similarity decreases. By using an ensemble of $k$ s, we can capture short and long-term volatility. 
 
+# Conclusions
 
 We tested a variety of feature engineering and Machine Learning methods to improve long-term predictive performance on LOB data. We found the most success using a blend of two groups of LightGBM models; one augmented by signature kernels, and the other trained on signature transforms. The most important development was the "autocorrelation"-like statistic derived from Signature Kernels - we demonstrated in our previous submission that it demonstrably boosts the performance of a control LightGBM model by a significant degree.
 
