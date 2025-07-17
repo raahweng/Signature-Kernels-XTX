@@ -1,10 +1,7 @@
 # Signature-Kernels-XTX
 
 Let $P_X$ be a set of paths in a topological space $X$. We define the truncated Signature Kernel up to depth $d$ $k_d^{\oplus}: P_X \times P_X \rightarrow \mathbb{R}$:
-$$
-    k_d^{\oplus}(x,y) = \langle S(k_x), S(k_y) \rangle
-    = \sum_{m = 0}^{d}{\int_{s_1 < ... < s_m, t_1<...<t_m} {\prod^m_{i=1}{d \kappa(s_i, t_i)}} }
-$$
+$$k_d^{\oplus}(x,y) = \langle S(k_x), S(k_y) \rangle = \sum_{m = 0}^{d}{\int_{s_1 < ... < s_m, t_1<...<t_m} {\prod^m_{i=1}{d \kappa(s_i, t_i)}} }$$
 
 where:
 $$
