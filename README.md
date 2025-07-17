@@ -4,9 +4,7 @@ Let $P_X$ be a set of paths in a topological space $X$. We define the truncated 
 $$k_d^{\oplus}(x,y) = \langle S(k_x), S(k_y) \rangle = \sum_{m = 0}^{d}{\int_{s_1 < ... < s_m, t_1<...<t_m} {\prod^m_{i=1}{d \kappa(s_i, t_i)}} }$$
 
 where:
-$$
-    \kappa([s,t] \times [u,v]) = k(x(t), y(v)) - k(x(s),y(v)) - k(x(t),y(u)) + k(x(s),y(u))
-$$
+$$\kappa([s,t] \times [u,v]) = k(x(t), y(v)) - k(x(s),y(v)) - k(x(t),y(u)) + k(x(s),y(u))$$
 
 Intuitively, the Signature Kernel computes the pairwise similarity of a collection of paths in signature transform space.
 
