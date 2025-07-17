@@ -1,15 +1,15 @@
 # Signature-Kernels-XTX
 
-Let $\mathcal{P}_\mathcal{X}$ be a set of paths in a topological space $\mathcal{X}$. We define the truncated Signature Kernel up to depth $d$ $k_d^{\oplus}: \mathcal{P}_\mathcal{X} \times \mathcal{P}_\mathcal{X} \rightarrow \mathbb{R}$:  [ksig]
-\begin{equation}
+Let $\mathcal{P}_\mathcal{X}$ be a set of paths in a topological space $\mathcal{X}$. We define the truncated Signature Kernel up to depth $d$ $k_d^{\oplus}: \mathcal{P}_\mathcal{X} \times \mathcal{P}_\mathcal{X} \rightarrow \mathbb{R}$:
+$$
     k_d^{\oplus}(x,y) = \langle S(k_x), S(k_y) \rangle
     = \sum_{m = 0}^{d}{\int_{s_1 < ... < s_m, t_1<...<t_m} {\prod^m_{i=1}{d \kappa(s_i, t_i)}} }
-\end{equation}
+$$
 
 where:
-\begin{equation}
+$$
     \kappa([s,t] \times [u,v]) = k(x(t), y(v)) - k(x(s),y(v)) - k(x(t),y(u)) + k(x(s),y(u))
-\end{equation}
+$$
 
 Intuitively, the Signature Kernel computes the pairwise similarity of a collection of paths in signature transform space.
 
