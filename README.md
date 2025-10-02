@@ -1,3 +1,5 @@
+A joint project with [Ellen Li](https://github.com/LN923), [Arav Bhattacharyya](https://github.com/FormulaRabbit81).
+
 # Background
 
 Let $P_X$ be a set of paths in a topological space $X$. We define the truncated Signature Kernel up to depth $d$ $k_d^{\oplus}: P_X \times P_X \rightarrow \mathbb{R}$:
